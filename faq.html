@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DynoVerse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="header-nav">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <main>
+        <section class="faq-section">
+            <h1>Frequently Asked Questions</h1>
+            <p class="faq-intro">Got questions? We’ve got answers! Here are the most common questions about DynoVerse.</p>
+
+            <!-- Accordion FAQ -->
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> What is DynoVerse?
+                    </div>
+                    <div class="faq-answer">
+                        <p>DynoVerse is an online gaming platform offering a variety of adventure, action, and puzzle games for players of all ages. Join our community and start playing today!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> How do I sign up for DynoTreasure?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Signing up is easy! Just visit our registration page and fill in your details. You’ll receive a confirmation email to get started on your gaming journey.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> Are the games free to play?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Most of our games are free to play, though some premium games may require a purchase or subscription to access special features.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> How can I contact support?
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you need assistance, visit our Contact page to reach our support team. We’re here to help with any issues or inquiries you may have.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> Can I play with my friends?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Many of our games offer multiplayer modes where you can join your friends or other players online. Start playing together now!</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <p>&copy; 2024 DynoVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Inline JavaScript to Handle Accordion -->
+    <script>
+        // Get all FAQ items
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Loop through each item and add a click event
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Toggle the active class to show or hide the answer
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details - DynoVerse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="header-nav">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Game Details Section -->
+    <main>
+        <section class="game-details">
+            <h1 id="game-title">Game Title</h1>
+            <img id="game-image" src="image/default-game.jpg" alt="Game Image" class="game-image">
+            <p id="game-description">Description of the game will appear here.</p>
+            <p><strong>Released:</strong> <span id="game-release-date">Unknown</span></p>
+            <p><strong>Platforms:</strong> <span id="game-platforms">Unknown</span></p>
+            <a id="game-link" href="games.html" class="btn" target="_blank">Play Game</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <p>&copy; 2024 DynoVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const gameId = params.get('game');
+
+        // Game data
+        const games = {
+            game1: {
+                title: "Stunt Paradise",
+                description: "Stunt Paradise is a high-octane driving adventure packed with daring stunts and electrifying challenges. Push your limits as you soar off ramps, pull off jaw-dropping flips, and crash through explosive obstacles. Every turn delivers a new thrill, testing your reflexes and courage. Are you ready to conquer the ultimate playground for fearless drivers?",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop, mobile, tablet), Steam",
+                image: "image/Stunt Paradise.avif",
+                link: "https://www.crazygames.com/game/stunt-paradise" // Link to the specific game
+            },
+            game2: {
+                title: "WorldGuessr Free GeoGuessr",
+                description: "Worldguessr is a casual quiz game, a free alternative to Geoguessr, perfect for testing and expanding your geography skills through immersive Street View exploration. Each round, you will find yourself dropped into random locations around the globe, with only environmental clues to guide you in pinpointing your exact whereabouts. From cityscapes to rural roads, your surroundings become the puzzle pieces you need to analyze, turning each game into a thrilling geographical investigation.",
+                releaseDate: "October 2024",
+                platforms: "Browser (desktop, mobile, tablet), App Store(Android)",
+                image: "image/WorldGuessr Free GeoGuessr.avif",
+                link: "https://www.crazygames.com/game/worldguessr" // Link to the specific game
+            },
+            game3: {
+                title: "Wordler",
+                description: "Wordler is a word game that challenges you to guess a five-letter word with only six tries. Every correct letter you pick will guide you closer, while incorrect letters bring you nearer to a game-ending countdown. Sharpen your vocabulary and deduction skills to see how many stages you can conquer in this tense and addictive guessing game.",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop, mobile, tablet)",
+                image: "image/Wordler.avif",
+                link: "https://www.crazygames.com/game/wordler" // Link to the specific game
+            },
+            game4: {
+                title: "Racing Limits",
+                description: "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes: carrier, infinite, against-time, and free mode. Choose between one-way and two-way traffic, and experience three times of day - 'Morning,' 'Sunset,' and 'Night.' With multiple camera angles, sensitive controls, and realistic physics, it's a high-speed adventure you won't want to miss. Customize, upgrade, and take on numerous race events in this graphically stunning racing world!",
+                releaseDate: "November 2023",
+                platforms: "Browser (desktop, mobile, tablet), App Store(iOS, Android)",
+                image: "image/Racing Limits.avif",
+                link: "https://www.crazygames.com/game/racing-limits" // Link to the specific game
+            },
+            game5: {
+                title: "Jump Guys",
+                description: "Jump Guys is a casual 3D multiplayer platformer where you navigate vibrant obstacle courses filled with traps, power-ups, and collectibles. Jump, climb, and race to the finish while dodging hazards. Activate power-ups for temporary boosts and collect coins to customize your character. Conquer increasingly difficult worlds with thrilling physics-defying stunts. Only one way forward: only up!",
+                releaseDate: "June 2024",
+                platforms: "Browser (desktop, mobile, tablet)",
+                image: "image/Jump Guys.avif",
+                link: "https://www.crazygames.com/game/jump-guys" // Link to the specific game
+            },
+            game6: {
+                title: "Shell Shockers",
+                description: "Shell Shockers (Shellshock.io) is a multiplayer .io FPS game featuring eggs armed with guns. You control one of these weapon-wielding eggs in one of four online game modes where the aim is to shatter your opponents with bullets and bombs. It's the ultimate online egg shooting game!",
+                releaseDate: "September 2017",
+                platforms: "Browser (desktop-only)",
+                image: "image/Shell Shockers.avif",
+                link: "https://www.crazygames.com/game/shellshockersio" // Link to the specific game
+            },
+            game7: {
+                title: "Pixel Warfare",
+                description: "Pixel Warfare is a superb multiplayer FPS game featuring blocky graphics and 8-bit music. The gameplay is classic, fast-paced, and tactical, featuring various weapons and maps. Choose a game from the menu screen to get started!",
+                releaseDate: "April 2022",
+                platforms: "Browser (desktop, mobile, tablet)",
+                image: "image/Pixel Warfare.avif",
+                link: "https://www.crazygames.com/game/pixel-warfare" // Link to the specific game
+            },
+            game8: {
+                title: "Color Tap: Coloring by Numbers",
+                description: "Color Tap: Coloring by Numbers is a relaxation game for a serene world of creativity. Immerse yourself in the soothing art of coloring, one piece at a time, as you destress with each gentle tap. Whether you're a coloring novice or a seasoned pro, this mindful journey invites you to unwind, focus, and express your creativity. Dive into meticulously detailed pictures, choosing your colors and creating your masterpiece, one tap at a time. Will you follow the numbers or embrace your inner artist and forge your unique path? Start your calming coloring adventure today with Color Tap: Coloring by Numbers!",
+                releaseDate: "October 2023",
+                platforms: "Browser (desktop, mobile, tablet), App Store(Android)",
+                image: "image/Color Tap.avif",
+                link: "https://www.crazygames.com/game/color-tap-coloring-by-numbers" // Link to the specific game
+            },
+            game9: {
+                title: "Cat Warrior Parkour",
+                description: "Cat Warrior Parkour is a thrilling parkour adventure where you guide your feline warrior through 7 challenging levels to unlock a final portal. Hone your jumping skills, find hidden jades to unlock custom looks, and express your style. With multiplayer mode, you can invite friends to join you in climbing the obstacles together!",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop, mobile, tablet)",
+                image: "image/Cat Warrior Parkour.avif",
+                link: "https://www.crazygames.com/game/cat-warrior-parkour" // Link to the specific game
+            },
+            game10: {
+                title: "Dobble Go!",
+                description: "Dobble Go! is a thrilling card game that tests your observation skills in quick-paced multiplayer matches. Challenge friends, family, or players worldwide while battling unique bosses and exploring exciting game modes. Unlock new decks and aim for victory as you sharpen your focus and compete for prizes in this dynamic experience.",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop-only), App Store(Android)",
+                image: "image/Dobble Go!.avif",
+                link: "https://www.crazygames.com/game/dobble-go" // Link to the specific game
+            },
+            game11: {
+                title: "Fill The Fridge",
+                description: "Fill The Fridge is a puzzle/casual sorting game where you organize your fridge after a supermarket shopping spree. Stock shelves with various items, finding the perfect spots for each. Enjoy the challenge of emptying your shopping carts and refilling the fridge. This engaging puzzle game makes organizing the kitchen both fun and satisfying.",
+                releaseDate: "August 2024",
+                platforms: "Browser (desktop, mobile, tablet), App Store(iOS, Android)",
+                image: "image/Fill The Fridge.avif",
+                link: "https://www.crazygames.com/game/fill-the-fridge" // Link to the specific game
+            },
+            game12: {
+                title: "World Z Defense - Zombie Defense",
+                description: "World Z Defense - Zombie Defense is a thrilling tower defense game where players must fight against hordes of zombies trying to overrun the world. In this post-apocalyptic scenario, your mission is to defend cities across the globe by strategically placing soldiers with different weapons, each offering unique stats like damage, shooting speed, and reload speed.",
+                releaseDate: "September 2024",
+                platforms: "Browser (desktop, mobile, tablet), App Store(iOS, Android)",
+                image: "image/World Z Defense - Zombie Defense.avif",
+                link: "https://www.crazygames.com/game/world-z-defense---zombie-defense" // Link to the specific game
+            },
+            game13: {
+                title: "Country Hopper",
+                description: "Country Hopper is a geography adventure game where you guide Delivery Doug across countries, finding the shortest routes between them. Test your skills by solving quick multi-hop paths and collecting jigsaw pieces that reveal stunning landmarks. Start your journey in Europe and earn stars to unlock new challenges, improving your world geography knowledge one quest at a time.",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop-only), Steam",
+                image: "image/Country Hopper.avif",
+                link: "https://www.crazygames.com/game/country-hopper" // Link to the specific game
+            },
+            game14: {
+                title: "Find The Difference",
+                description: "Find the Difference is an engaging game that tests your attention and concentration skills as you search for 10 differences in various pictures. Sharpen your observation abilities, enhance visual thinking, boost memory, reduce stress, and improve concentration. With no time limit, this game is suitable for all ages and provides a relaxing and enjoyable experience. Challenge yourself and see how many differences you can spot!",
+                releaseDate: "July 2023",
+                platforms: "Browser (desktop, mobile, tablet), App Store(iOS, Android)",
+                image: "image/Find The Difference.avif",
+                link: "https://www.crazygames.com/game/find-the-difference" // Link to the specific game
+            },
+            game15: {
+                title: "Find Me: Lost Objects",
+                description: "Find Me: Lost Objects is a captivating adventure where you join Octo the octopus on a thrilling journey across stunning underwater landscapes and beyond, even into space! Discover hidden objects, tackle exciting challenges, and help Octo rescue his true love. This enchanting quest is full of surprises, immersive worlds, and heartwarming moments.",
+                releaseDate: "November 2024",
+                platforms: "Browser (desktop, mobile, tablet), App Store(Android)",
+                image: "image/Find Me.avif",
+                link: "https://www.crazygames.com/game/find-me-lost-objects" // Link to the specific game
+            },
+        };
+        // Update the page content based on the selected game
+        if (games[gameId]) {
+            const game = games[gameId];
+            document.getElementById('game-title').textContent = games[gameId].title;
+            document.getElementById('game-image').src = games[gameId].image;
+            document.getElementById('game-description').textContent = games[gameId].description;
+            document.getElementById('game-release-date').textContent = games[gameId].releaseDate;
+            document.getElementById('game-platforms').textContent = games[gameId].platforms;
+            document.getElementById('game-link').href = games[gameId].link;
+        } else {
+            document.getElementById('game-title').textContent = "Game Not Found";
+            document.getElementById('game-description').textContent = "We couldn't find the game you were looking for.";
+            document.getElementById('game-release-date').textContent = "N/A";
+            document.getElementById('game-platforms').textContent = "N/A";
+
+            // Hide the Play Game button if the game doesn't exist
+            document.getElementById('game-link').style.display = "none";
+        }
+    </script>
+</body>
+</html>

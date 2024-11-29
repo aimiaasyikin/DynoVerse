@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome CDN to use icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <table id="leaderboard">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Achievements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><span class="player-icon"></span> Player A</td>
+                <td>9945</td>
+                <td>🏆 🥇 🎮</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><span class="player-icon"></span> Player B</td>
+                <td>9346</td>
+                <td>🥈 🎮</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><span class="player-icon"></span> Player C</td>
+                <td>8950</td>
+                <td>🥉 🎮</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><span class="player-icon"></span> Player D</td>
+                <td>7750</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><span class="player-icon"></span> Player E</td>
+                <td>7750</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><span class="player-icon"></span> Player F</td>
+                <td>6930</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><span class="player-icon"></span> Player G</td>
+                <td>6260</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><span class="player-icon"></span> Player H</td>
+                <td>6259</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><span class="player-icon"></span> Player I</td>
+                <td>5238</td>
+                <td>🎮</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><span class="player-icon"></span> Player J</td>
+                <td>5104</td>
+                <td>🎮</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Add JavaScript to randomly assign icons -->
+    <script>
+        // List of possible Font Awesome icons for players
+        const icons = [
+            'fa-user', 'fa-gamepad', 'fa-trophy', 'fa-star', 'fa-heart',
+            'fa-ghost', 'fa-diamond', 'fa-cogs', 'fa-snowflake', 'fa-bolt'
+        ];
+
+        // Function to randomly assign an icon
+        function assignRandomIcons() {
+            const playerIcons = document.querySelectorAll('.player-icon');
+            playerIcons.forEach(icon => {
+                const randomIndex = Math.floor(Math.random() * icons.length); // Get a random index
+                icon.classList.add('fas', icons[randomIndex]); // Add the random icon class
+            });
+        }
+
+        // Call the function to assign icons when the page loads
+        window.onload = assignRandomIcons;
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="DynoVerse Logo" class="logo">
+            </a>
+            <p>&copy; 2024 DynoVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
